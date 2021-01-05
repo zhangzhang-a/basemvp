@@ -55,6 +55,5 @@ dependencies {
     api 'com.github.bumptech.glide:glide:4.11.0'//图片
 
     apply plugin: 'com.github.dcendents.android-maven'
-//没有group这行Jitpack编译的时候出错“cannot open git-upload-pack”
-    group = 'com.github.abcdqianlei1990'
+    group = 'com.github.zhangzhang-a '
 }
