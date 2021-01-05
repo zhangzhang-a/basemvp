@@ -1,7 +1,5 @@
 plugins {
-    id 'com.android.library'
-
-
+    id 'com.android.application'
 }
 
 android {
@@ -9,13 +7,13 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
+        applicationId "com.example.myapplication"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -34,27 +32,9 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':basemvp')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    //retrofit
-    api 'com.squareup.retrofit2:retrofit:2.5.0'
-    api 'com.squareup.retrofit2:converter-gson:2.5.0'
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
-    //okhttp
-    api 'com.squareup.okhttp3:okhttp:3.6.0'
-    //RxJava依赖
-    api 'io.reactivex.rxjava2:rxjava:2.2.7'
-    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
-
-    //Butterknife
-    api 'com.jakewharton:butterknife:10.1.0'
-    api 'com.jakewharton:butterknife-compiler:10.1.0'
-
-    api 'com.github.bumptech.glide:glide:4.11.0'//图片
-
-    apply plugin: 'com.github.dcendents.android-maven'
-//没有group这行Jitpack编译的时候出错“cannot open git-upload-pack”
-    group = 'com.github.abcdqianlei1990'
 }
